@@ -1,0 +1,62 @@
+# Compiled source #
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Logs and databases #
+*.log
+*.sql
+*.sqlite
+*.db
+
+# OS generated files #
+.DS_Store
+.localized
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE specific files #
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.cproject
+.buildpath
+
+# Build and temporary files #
+build/
+dist/
+bin/
+tmp/
+temp/
+obj/
+out/
+*.pyc
+*.swp
+*~
+*.bak
+*.swo
+*.local
+
+# Sensitive files (ADD YOUR PROJECT SPECIFIC SENSITIVE FILES HERE!)
+# .env
+# config.ini
+# credentials.json
+# local.properties # Eğer Android projesi ise

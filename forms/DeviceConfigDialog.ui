@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DeviceConfigDialog</class>
+ <widget class="QDialog" name="DeviceConfigDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Device Configuration</string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item>
+    <widget class="QGroupBox" name="basicGroup">
+     <property name="title">
+      <string>Basic Settings</string>
+     </property>
+     <layout class="QFormLayout" name="basicLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="ipLabel">
+        <property name="text">
+         <string>IP Address:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="ipEdit"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="portLabel">
+        <property name="text">
+         <string>Port:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QSpinBox" name="portSpin"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="slaveIdLabel">
+        <property name="text">
+         <string>Slave ID:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QSpinBox" name="slaveIdSpin"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="deviceNameLabel">
+        <property name="text">
+         <string>Device Name:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="deviceNameEdit"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="plcTypeLabel">
+        <property name="text">
+         <string>PLC Type:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QComboBox" name="plcTypeCombo"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="registerSettingsGroup">
+     <property name="title">
+      <string>Register Settings</string>
+     </property>
+     <layout class="QFormLayout" name="registerSettingsLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="registerTypeLabel">
+        <property name="text">
+         <string>Register Type:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="registerTypeCombo"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="dataTypeLabel">
+        <property name="text">
+         <string>Data Type:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="dataTypeCombo"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="byteOrderLabel">
+        <property name="text">
+         <string>Byte Order:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="byteOrderCombo"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="communicationGroup">
+     <property name="title">
+      <string>Communication Settings</string>
+     </property>
+     <layout class="QFormLayout" name="communicationLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="timeoutLabel">
+        <property name="text">
+         <string>Timeout:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QSpinBox" name="timeoutSpin"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="retryCountLabel">
+        <property name="text">
+         <string>Retry Count:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QSpinBox" name="retryCountSpin"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="registerTable">
+     <property name="editTriggers">
+      <set>QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <widget class="QPushButton" name="addButton">
+       <property name="text">
+        <string>Add Register</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="removeButton">
+       <property name="text">
+        <string>Remove Register</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="okButton">
+       <property name="text">
+        <string>OK</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelButton">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
